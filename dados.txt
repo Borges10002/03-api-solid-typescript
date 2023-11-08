@@ -1,0 +1,13 @@
+criar package.json
+  npm init -y
+
+biblioteca typescript
+  npm install typescript
+  npm i typescript @types/node tsc tsup -D
+
+criar tsconfig.json
+  tsc --init
+
+biblioteca de rotas 
+  npm i fastify 
+  
