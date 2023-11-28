@@ -10,4 +10,10 @@ criar tsconfig.json
 
 biblioteca de rotas 
   npm i fastify 
+
+biblioteca para carregar .env 
+  npm i dotenv
+
+biblioteca para validacao 
+  npm i zod 
   
