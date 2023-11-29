@@ -17,3 +17,17 @@ biblioteca para carregar .env
 biblioteca para validacao 
   npm i zod 
   
+biblioteca de ORM comunicacao with banco de dados
+  npm i prisma -D
+  iniciar banco de dados - npx prisma init
+
+  "[prisma]": {
+  "editor.defaultFormatter": "Prisma.prisma",
+  "editor.formatOnSave": true
+},
+- criar as tipagem automatizado 
+   npx prisma generate  
+   npm i @prisma/client
+
+
+  
