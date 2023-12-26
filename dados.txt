@@ -37,6 +37,9 @@ biblioteca de ORM comunicacao with banco de dados
   npm i bcryptjs
   npm i -D @types/bcryptjs 
 
+biblioteca to test 
+  npm i vitest vite-tsconfig-paths -D 
+
 
 
   
