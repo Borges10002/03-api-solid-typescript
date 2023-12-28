@@ -39,6 +39,8 @@ biblioteca de ORM comunicacao with banco de dados
 
 biblioteca to test 
   npm i vitest vite-tsconfig-paths -D 
+  https://vitest.dev/guide/ui.html 
+  npm i -D @vitest/ui
 
 
 
