@@ -15,6 +15,8 @@ export async function authenticate(
 
   const { email, password } = registerBodySchema.parse(request.body);
 
+  console.log(password);
+
   try {
     const prismaUsersRepository = new PrismaUsersRepository();
     const authenticateUseCase = new AuthenticateUseCase(prismaUsersRepository);
