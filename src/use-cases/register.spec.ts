@@ -4,7 +4,7 @@ import { beforeEach, describe, expect, it } from "vitest";
 import { UserAlreadyExistsError } from "./errors/user.already-exists-error";
 import { RegisterUseCase } from "./register";
 
-let usersRepository = InMemoryUsersRepository;
+let usersRepository: InMemoryUsersRepository;
 let sut: RegisterUseCase;
 
 describe("Register Use Case", () => {
