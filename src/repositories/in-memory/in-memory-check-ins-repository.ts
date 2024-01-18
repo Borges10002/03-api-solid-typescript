@@ -6,6 +6,16 @@ import { CheckInsRepository } from "../check-ins-repository";
 export class InMemoryCheckInsRepository implements CheckInsRepository {
   public items: CheckIn[] = [];
 
+  async findById(id: string): Promise<CheckIn | null> {
+    const chekIn = this.items.find((item) => item.id === id);
+
+    if (!chekIn) {
+      return null;
+    }
+
+    return chekIn;
+  }
+
   async findByUserIdOnDate(
     userId: string,
     date: Date
@@ -48,6 +58,16 @@ export class InMemoryCheckInsRepository implements CheckInsRepository {
     } as CheckIn;
 
     this.items.push(checkIn);
+
+    return checkIn;
+  }
+
+  async save(checkIn: CheckIn): Promise<CheckIn> {
+    const checkInIndex = this.items.findIndex((item) => item.id === checkIn.id);
+
+    if (checkInIndex >= 0) {
+      this.items[checkInIndex] = checkIn;
+    }
 
     return checkIn;
   }
