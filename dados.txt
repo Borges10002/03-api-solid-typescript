@@ -42,6 +42,9 @@ biblioteca to test
   https://vitest.dev/guide/ui.html 
   npm i -D @vitest/ui
 
+biblioteca de autenticacao 
+  npm i @fastify/jwt
+
 
 
   
