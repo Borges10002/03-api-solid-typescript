@@ -45,6 +45,9 @@ biblioteca to test
 biblioteca de autenticacao 
   npm i @fastify/jwt
 
+biblioteca de teste http 
+  npm link
+
 
 
   
