@@ -48,6 +48,9 @@ biblioteca de autenticacao
 biblioteca de teste http 
   npm link
 
+biblioteca para executar script
+  npm i -D npm-run-all
+
 
 
   
