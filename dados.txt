@@ -51,6 +51,10 @@ biblioteca de teste http
 biblioteca para executar script
   npm i -D npm-run-all
 
+biblioteca para executar supertest 
+  npm i supertest -D  
+  npm i @types/supertest -D
+
 
 
   
