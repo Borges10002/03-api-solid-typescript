@@ -1,5 +1,4 @@
-version: "3.9"
-
+version: "3.8"
 services:
   database:
     image: postgres
@@ -8,9 +7,10 @@ services:
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_USER=docker
-      - POSTGRES_PASSWORD=
-      - POSTGRES_DB=apisolid
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=apisolid
+
     volumes:
       - pgdata:/data/postgres
 
