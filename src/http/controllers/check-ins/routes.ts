@@ -1,4 +1,4 @@
-import { verifyJWT } from "@/http/middlewares/verify-jwt";
+import { verifyJwt } from "@/http/middlewares/verify-jwt";
 
 import { FastifyInstance } from "fastify";
 import { create } from "./create";
@@ -7,7 +7,7 @@ import { metrics } from "./metrics";
 import { validate } from "./validate";
 
 export async function checkInsRoutes(app: FastifyInstance) {
-  app.addHook("onRequest", verifyJWT);
+  app.addHook("onRequest", verifyJwt);
 
   app.get("/check-ins/history", history);
   app.get("/check-ins/metrics", metrics);

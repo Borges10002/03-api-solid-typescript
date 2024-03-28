@@ -1,18 +1,23 @@
-import { makeSearchGymsUseCase } from "@/use-cases/factories/make-search-gyms-use-case";
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
+import { makeSearchGymsUseCase } from "@/use-cases/factories/make-search-gyms-use-case";
 
-export async function search(request: FastifyRequest, replay: FastifyReply) {
+export async function search(request: FastifyRequest, reply: FastifyReply) {
   const searchGymsQuerySchema = z.object({
     q: z.string(),
     page: z.coerce.number().min(1).default(1),
   });
 
-  const { q, page } = searchGymsQuerySchema.parse(request.body);
+  const { q, page } = searchGymsQuerySchema.parse(request.query);
 
-  const searchGymsSchema = makeSearchGymsUseCase();
+  const searchGymsUseCase = makeSearchGymsUseCase();
 
-  const { gyms } = await searchGymsSchema.execute({ query: q, page });
+  const { gyms } = await searchGymsUseCase.execute({
+    query: q,
+    page,
+  });
 
-  return replay.status(200).send({ gyms });
+  return reply.status(200).send({
+    gyms,
+  });
 }
