@@ -29,7 +29,7 @@ describe("Validate Check-in (e2e)", () => {
     let checkIn = await prisma.checkIn.create({
       data: {
         gym_id: gym.id,
-        user_id: user.id,
+        user_id: user.id,'
       },
     });
 

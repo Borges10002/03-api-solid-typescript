@@ -80,6 +80,9 @@ biblioteca para executar supertest
   npm i supertest -D  
   npm i @types/supertest -D
 
+biblioteca para trabalhar com cook
+npm i @fastify/cookie
+
 
 
   
